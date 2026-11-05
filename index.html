@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Lokal Laku membantu UMKM Malang dan sekitarnya menyiapkan legalitas awal dan katalog digital dalam satu alur layanan.">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png">
   <title>Lokal Laku | Legalitas dan katalog usaha</title>
   <style>
-    :root { color-scheme:light; --paper:#f3f7f4; --panel:#ffffff; --ink:#18312a; --muted:#50635c; --tan:#ddeee7; --line:#bfd3c9; --control:#44665b; --accent:#147d6d; }
+    :root { color-scheme:light; --paper:#f2f1ec; --panel:#fffdf7; --ink:#1d1f1b; --muted:#596057; --tan:#e7e5dc; --line:#d6d5ce; --control:#2f5d3a; --accent:#b5462b; }
     * { box-sizing:border-box; }
     html { scroll-padding-top:1rem; }
     body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
@@ -29,7 +30,8 @@
     .skip:focus { transform:none; }
     .topbar { border-bottom:1px solid var(--line); padding-block:1rem; }
     .topbar .wrap { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem 1rem; }
-    .brand { min-height:44px; display:inline-flex; align-items:center; text-decoration:none; font-weight:850; letter-spacing:-.035em; font-size:1.15rem; }
+    .brand { min-height:44px; display:inline-flex; align-items:center; text-decoration:none; }
+    .brand-logo { display:block; width:10.5rem; height:auto; }
     .nav { display:flex; flex-wrap:wrap; gap:.35rem 1rem; }
     .nav a { display:inline-flex; align-items:center; min-height:44px; color:var(--muted); font-size:.9rem; text-underline-offset:.25rem; }
     .nav a:hover { color:var(--accent); }
@@ -48,6 +50,7 @@
     .region { color:var(--accent); font-size:.9rem; font-weight:750; margin-bottom:1.1rem; }
     .actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-block:1.8rem 1rem; }
     .hero-note { padding-top:1.4rem; border-top:2px solid var(--ink); align-self:end; }
+    .hero-mascot { display:block; width:min(100%,13rem); height:auto; margin:0 auto 1rem; }
     .hero-note h2 { font:750 1.05rem/1.4 system-ui,sans-serif; letter-spacing:0; margin-bottom:.8rem; }
     .hero-note p { font-size:.92rem; color:var(--muted); }
     .section { padding-block:3rem; border-top:1px solid var(--line); }
@@ -91,18 +94,19 @@
     #copy-request { width:100%; margin-top:1rem; }
     #copy-status { min-height:3.1rem; font-size:.88rem; margin:1rem 0 0; }
     .request-footnote { margin:1rem 0 0; }
-    footer { padding-block:1.5rem 2rem; border-top:1px solid var(--line); }
+    footer { padding-block:1.5rem 2rem; border-top:1px solid var(--line); background:var(--ink); color:var(--paper); }
     footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem 2rem; }
-    footer p { margin:0; font-size:.85rem; color:var(--muted); max-width:45rem; }
+    footer p { margin:0; font-size:.85rem; color:#d6d5ce; max-width:45rem; }
+    .footer-logo { display:block; width:12rem; height:auto; margin-bottom:.75rem; }
     @media(min-width:42rem) { .wrap { width:min(1120px,calc(100% - 3rem)); } .hero { padding-block:4rem; } .offer { grid-template-columns:minmax(0,1fr) 15rem; gap:2rem; } .offer-code { grid-column:1/-1; } .offer-price { padding-top:0; } .request-panel { padding:1.75rem; } }
-    @media(max-width:41.99rem) { .catalog-head { display:block; } .catalog-item { grid-template-columns:3rem minmax(0,1fr); gap:.45rem .8rem; } .catalog-item b { grid-column:2; text-align:left; } .catalog-action { grid-column:2; text-align:left; } }
+    @media(max-width:41.99rem) { .brand-logo { width:8.75rem; } .catalog-head { display:block; } .catalog-item { grid-template-columns:3rem minmax(0,1fr); gap:.45rem .8rem; } .catalog-item b { grid-column:2; text-align:left; } .catalog-action { grid-column:2; text-align:left; } }
     @media(min-width:64rem) { .hero { padding-block:5rem 4.5rem; } .hero-layout { grid-template-columns:minmax(0,2.25fr) minmax(0,1fr); gap:4rem; } .hero-note { max-width:20rem; justify-self:end; } .section { padding-block:4rem; } .section-head { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1fr); gap:3rem; align-items:end; max-width:none; } .section-head p { max-width:34rem; justify-self:end; } .offer { grid-template-columns:4rem minmax(0,1fr) 17rem; gap:2rem; padding-block:2rem; } .offer-code { grid-column:auto; padding-top:.15rem; } .process-layout,.request-layout { grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); gap:4rem; } }
     @media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
   </style>
 </head>
 <body>
   <a class="skip" href="#layanan">Langsung ke pilihan layanan</a>
-  <header class="topbar"><div class="wrap"><a class="brand" href="#atas">Lokal Laku</a><nav class="nav" aria-label="Navigasi utama"><a href="#layanan">Layanan</a><a href="#alur">Alur kerja</a><a href="#permintaan">Susun permintaan</a></nav></div></header>
+  <header class="topbar"><div class="wrap"><a class="brand" href="#atas"><img class="brand-logo" src="assets/logo-lokal-laku.svg" alt="Lokal Laku"></a><nav class="nav" aria-label="Navigasi utama"><a href="#layanan">Layanan</a><a href="#alur">Alur kerja</a><a href="#permintaan">Susun permintaan</a></nav></div></header>
   <div class="draft"><p class="wrap"><strong>Lokal Laku.</strong> Satu tim untuk pemasaran dan pemenuhan layanan. Halaman ini belum menerima pembayaran atau dokumen sensitif.</p></div>
   <main id="atas">
     <section class="hero"><div class="wrap hero-layout"><div>
@@ -111,7 +115,7 @@
       <p class="lead">Mulai dari kebutuhan yang memang ada: pendampingan NIB, pemeriksaan kelayakan SPP-IRT, atau halaman katalog untuk memperjelas produk dan cara pesan.</p>
       <div class="actions"><a class="button primary" href="#layanan">Pilih kebutuhan usaha</a><a class="button" href="#alur">Lihat alurnya</a></div>
       <p class="small">Semua layanan tampil dalam satu katalog Lokal Laku. Tim kami memeriksa kelayakan dan rincian biaya sebelum Anda menyetujui penawaran.</p>
-    </div><aside class="hero-note" aria-label="Cara kerja layanan"><h2>Satu tim.<br>Dari brief sampai hasil.</h2><p>Dari percakapan awal, pemeriksaan, penawaran, hingga dukungan, semua berjalan di bawah brand Lokal Laku.</p><p>Nama badan usaha pelaksana, kontak resmi, dan detail pembayaran tercantum pada penawaran atau invoice.</p></aside></div></section>
+    </div><aside class="hero-note" aria-label="Cara kerja layanan"><img class="hero-mascot" src="assets/si-cap-siap-jual.svg" alt="Si Cap dengan cap Siap Jual"><h2>Satu tim.<br>Dari brief sampai hasil.</h2><p>Dari percakapan awal, pemeriksaan, penawaran, hingga dukungan, semua berjalan di bawah brand Lokal Laku.</p><p>Nama badan usaha pelaksana, kontak resmi, dan detail pembayaran tercantum pada penawaran atau invoice.</p></aside></div></section>
     <section id="layanan" class="section" aria-labelledby="services-title"><div class="wrap">
       <div class="section-head"><h2 id="services-title">Layanan dan harga<br>untuk usaha Anda.</h2><p>Semua layanan sudah dilebur menjadi satu katalog Lokal Laku. Pilih kebutuhan, lalu tanyakan detailnya lewat WhatsApp.</p></div>
       <div class="catalog" aria-labelledby="catalog-title"><div class="catalog-head"><h3 id="catalog-title">Daftar layanan dan harga</h3><p class="small">Harga mengikuti daftar yang Anda kirim. Cakupan, kelayakan, dan detail biaya dikonfirmasi sebelum pembayaran.</p></div><div class="catalog-list">
@@ -133,7 +137,7 @@
       <label for="request-text">Ringkasan pesan</label><textarea id="request-text" readonly spellcheck="false" aria-describedby="manual-copy"></textarea><a id="copy-request" class="button primary" target="_blank" rel="noopener" href="https://wa.me/6282142858194">Buka WhatsApp</a><p id="copy-status" role="status" aria-live="polite">Pesan siap ditinjau sebelum dikirim.</p><p id="manual-copy" class="small request-footnote">WhatsApp terbuka di tab baru. Tidak ada pesan yang dikirim otomatis dan tidak ada data yang disimpan oleh halaman.</p><noscript><p>Pilih layanan lalu buka WhatsApp dengan pesan umum. Halaman ini tidak mengirim pesan otomatis.</p></noscript>
     </div></div></section>
   </main>
-  <footer><div class="wrap"><p><strong>Lokal Laku</strong><br>Brand layanan legalitas awal dan katalog digital untuk UMKM Malang dan sekitarnya.</p><p>Detail badan usaha pelaksana tercantum dalam penawaran. Tidak menerima pembayaran atau dokumen melalui halaman ini.</p></div></footer>
+  <footer><div class="wrap"><p><img class="footer-logo" src="assets/logo-lokal-laku-putih.svg" alt="Lokal Laku">Brand layanan legalitas awal dan katalog digital untuk UMKM Malang dan sekitarnya.</p><p>Detail badan usaha pelaksana tercantum dalam penawaran. Tidak menerima pembayaran atau dokumen melalui halaman ini.</p></div></footer>
   <script>
     'use strict';
     const choices={
