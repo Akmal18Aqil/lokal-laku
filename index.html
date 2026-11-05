@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lokal Laku membantu UMKM Malang dan sekitarnya menyiapkan legalitas awal dan katalog digital dalam satu alur layanan.">
+  <meta name="description" content="Sahabat Legal Figa membantu UMKM Malang dan sekitarnya mengurus legalitas usaha dan menyiapkan katalog digital, dalam satu alur yang jelas.">
+  <meta name="theme-color" content="#1f3a5f">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
   <link rel="icon" href="assets/favicon-32.png" type="image/png">
-  <title>Lokal Laku | Legalitas dan katalog usaha</title>
+  <title>Sahabat Legal Figa | Legalitas dan katalog usaha</title>
   <style>
-    :root { color-scheme:light; --paper:#f2f1ec; --panel:#fffdf7; --ink:#1d1f1b; --muted:#596057; --tan:#e7e5dc; --line:#d6d5ce; --control:#2f5d3a; --accent:#b5462b; }
+    :root { color-scheme:light; --paper:#f4f1e8; --panel:#fffdf8; --ink:#1b2a44; --muted:#4e586b; --tan:#ede6d6; --line:#d8d1c1; --control:#1f3a5f; --brand:#1f3a5f; --accent:#b3362b; --wood:#9a6b3f; }
     * { box-sizing:border-box; }
     html { scroll-padding-top:1rem; }
     body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
@@ -20,18 +21,18 @@
     button,select,textarea { font:inherit; }
     button,.button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; border:1px solid var(--ink); border-radius:4px; padding:.7rem 1.1rem; text-decoration:none; font-weight:750; background:var(--panel); color:var(--ink); }
     button:hover:not(:disabled),.button:hover { background:var(--tan); }
-    button:active:not(:disabled),.button:active { background:#c9e2d8; border-width:2px; }
+    button:active:not(:disabled),.button:active { background:#dce3ec; border-width:2px; }
     button:disabled { border-style:dashed; color:var(--muted); background:var(--tan); }
-    .primary { background:var(--accent); color:var(--panel); border-color:var(--accent); }
-    .primary:hover:not(:disabled),.primary.button:hover { background:#0f6658; color:var(--panel); }
-    .primary:active:not(:disabled),.primary.button:active { background:#0a5046; }
+    .primary { background:var(--brand); color:var(--panel); border-color:var(--brand); }
+    .primary:hover:not(:disabled),.primary.button:hover { background:#15294a; color:var(--panel); }
+    .primary:active:not(:disabled),.primary.button:active { background:#0f1f38; }
     .wrap { width:min(1120px,calc(100% - 2rem)); margin-inline:auto; }
     .skip { position:absolute; left:1rem; top:.5rem; z-index:2; padding:.7rem 1rem; background:var(--panel); transform:translateY(-200%); }
     .skip:focus { transform:none; }
     .topbar { border-bottom:1px solid var(--line); padding-block:1rem; }
     .topbar .wrap { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:.5rem 1rem; }
     .brand { min-height:44px; display:inline-flex; align-items:center; text-decoration:none; }
-    .brand-logo { display:block; width:10.5rem; height:auto; }
+    .brand-logo { display:block; width:11.5rem; height:auto; }
     .nav { display:flex; flex-wrap:wrap; gap:.35rem 1rem; }
     .nav a { display:inline-flex; align-items:center; min-height:44px; color:var(--muted); font-size:.9rem; text-underline-offset:.25rem; }
     .nav a:hover { color:var(--accent); }
@@ -49,7 +50,7 @@
     .hero-layout { display:grid; gap:2rem; }
     .region { color:var(--accent); font-size:.9rem; font-weight:750; margin-bottom:1.1rem; }
     .actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-block:1.8rem 1rem; }
-    .hero-note { padding-top:1.4rem; border-top:2px solid var(--ink); align-self:end; }
+    .hero-note { padding-top:1.4rem; border-top:3px solid var(--accent); align-self:end; }
     .hero-mascot { display:block; width:min(100%,13rem); height:auto; margin:0 auto 1rem; }
     .hero-note h2 { font:750 1.05rem/1.4 system-ui,sans-serif; letter-spacing:0; margin-bottom:.8rem; }
     .hero-note p { font-size:.92rem; color:var(--muted); }
@@ -96,7 +97,7 @@
     .request-footnote { margin:1rem 0 0; }
     footer { padding-block:1.5rem 2rem; border-top:1px solid var(--line); background:var(--ink); color:var(--paper); }
     footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem 2rem; }
-    footer p { margin:0; font-size:.85rem; color:#d6d5ce; max-width:45rem; }
+    footer p { margin:0; font-size:.85rem; color:#c9ceda; max-width:45rem; }
     .footer-logo { display:block; width:12rem; height:auto; margin-bottom:.75rem; }
     @media(min-width:42rem) { .wrap { width:min(1120px,calc(100% - 3rem)); } .hero { padding-block:4rem; } .offer { grid-template-columns:minmax(0,1fr) 15rem; gap:2rem; } .offer-code { grid-column:1/-1; } .offer-price { padding-top:0; } .request-panel { padding:1.75rem; } }
     @media(max-width:41.99rem) { .brand-logo { width:8.75rem; } .catalog-head { display:block; } .catalog-item { grid-template-columns:3rem minmax(0,1fr); gap:.45rem .8rem; } .catalog-item b { grid-column:2; text-align:left; } .catalog-action { grid-column:2; text-align:left; } }
@@ -106,38 +107,38 @@
 </head>
 <body>
   <a class="skip" href="#layanan">Langsung ke pilihan layanan</a>
-  <header class="topbar"><div class="wrap"><a class="brand" href="#atas"><img class="brand-logo" src="assets/logo-lokal-laku.svg" alt="Lokal Laku"></a><nav class="nav" aria-label="Navigasi utama"><a href="#layanan">Layanan</a><a href="#alur">Alur kerja</a><a href="#permintaan">Susun permintaan</a></nav></div></header>
-  <div class="draft"><p class="wrap"><strong>Lokal Laku.</strong> Satu tim untuk pemasaran dan pemenuhan layanan. Halaman ini belum menerima pembayaran atau dokumen sensitif.</p></div>
+  <header class="topbar"><div class="wrap"><a class="brand" href="#atas"><img class="brand-logo" src="assets/logo-sahabat-legal-figa.svg" alt="Sahabat Legal Figa"></a><nav class="nav" aria-label="Navigasi utama"><a href="#layanan">Layanan</a><a href="#alur">Alur kerja</a><a href="#permintaan">Susun permintaan</a></nav></div></header>
+  <div class="draft"><p class="wrap"><strong>Sahabat Legal Figa.</strong> Teman UMKM buat urusan izin usaha dan katalog online. Halaman ini belum menerima pembayaran atau dokumen sensitif.</p></div>
   <main id="atas">
     <section class="hero"><div class="wrap hero-layout"><div>
       <p class="region">Untuk UMKM Malang dan sekitarnya</p>
       <h1>Legalitas usaha.<br>Katalog yang mudah dibagikan.</h1>
       <p class="lead">Mulai dari kebutuhan yang memang ada: pendampingan NIB, pemeriksaan kelayakan SPP-IRT, atau halaman katalog untuk memperjelas produk dan cara pesan.</p>
       <div class="actions"><a class="button primary" href="#layanan">Pilih kebutuhan usaha</a><a class="button" href="#alur">Lihat alurnya</a></div>
-      <p class="small">Semua layanan tampil dalam satu katalog Lokal Laku. Tim kami memeriksa kelayakan dan rincian biaya sebelum Anda menyetujui penawaran.</p>
-    </div><aside class="hero-note" aria-label="Cara kerja layanan"><img class="hero-mascot" src="assets/si-cap-siap-jual.svg" alt="Si Cap dengan cap Siap Jual"><h2>Satu tim.<br>Dari brief sampai hasil.</h2><p>Dari percakapan awal, pemeriksaan, penawaran, hingga dukungan, semua berjalan di bawah brand Lokal Laku.</p><p>Nama badan usaha pelaksana, kontak resmi, dan detail pembayaran tercantum pada penawaran atau invoice.</p></aside></div></section>
+      <p class="small">Semua layanan ada di satu katalog. Tim kami memeriksa kelayakan dan rincian biaya sebelum Anda menyetujui penawaran.</p>
+    </div><aside class="hero-note" aria-label="Cara kerja layanan"><img class="hero-mascot" src="assets/si-cap-sahabat.svg" alt="Si Cap, stempel bergagang kayu yang tersenyum, di samping kertas bercap SAH"><h2>Satu tim.<br>Dari brief sampai hasil.</h2><p>Dari percakapan awal, pemeriksaan, penawaran, hingga dukungan, semuanya ditangani tim Sahabat Legal Figa.</p><p>Nama badan usaha pelaksana, kontak resmi, dan detail pembayaran tercantum pada penawaran atau invoice.</p></aside></div></section>
     <section id="layanan" class="section" aria-labelledby="services-title"><div class="wrap">
-      <div class="section-head"><h2 id="services-title">Layanan dan harga<br>untuk usaha Anda.</h2><p>Semua layanan sudah dilebur menjadi satu katalog Lokal Laku. Pilih kebutuhan, lalu tanyakan detailnya lewat WhatsApp.</p></div>
-      <div class="catalog" aria-labelledby="catalog-title"><div class="catalog-head"><h3 id="catalog-title">Daftar layanan dan harga</h3><p class="small">Harga mengikuti daftar yang Anda kirim. Cakupan, kelayakan, dan detail biaya dikonfirmasi sebelum pembayaran.</p></div><div class="catalog-list">
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20NIB%20Perorangan."><span class="catalog-code">L01</span><span><strong>NIB Perorangan</strong><small>Satu pelaku usaha perorangan</small></span><b>Rp49.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20NIB%20Badan%20Usaha."><span class="catalog-code">L02</span><span><strong>NIB Badan Usaha</strong><small>Pengajuan untuk badan usaha</small></span><b>Rp149.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20PT%20Perorangan%20lengkap."><span class="catalog-code">L03</span><span><strong>PT Perorangan lengkap</strong><small>Pendirian dan paket kelengkapan sesuai scope</small></span><b>Rp549.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20Sertifikat%20Halal%20Self%20Declare."><span class="catalog-code">L04</span><span><strong>Sertifikat Halal Self Declare</strong><small>Jalur dan kelayakan diperiksa per produk</small></span><b>Rp549.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20Sertifikat%20Halal%20Reguler."><span class="catalog-code">L05</span><span><strong>Sertifikat Halal Reguler</strong><small>Rincian proses dan biaya mengikuti produk</small></span><b>Rp4.999.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20SP-PIRT."><span class="catalog-code">L06</span><span><strong>SP-PIRT</strong><small>Untuk produk pangan yang memenuhi ketentuan</small></span><b>Rp249.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20PSAT-PDUK%20untuk%20beras%20atau%20tanaman%20segar%20dari%20alam."><span class="catalog-code">L07</span><span><strong>PSAT-PDUK</strong><small>Untuk beras atau tanaman segar dari alam</small></span><b>Rp249.000</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20landing%20page%20katalog%20dan%20cara%20pesan."><span class="catalog-code">D02</span><span><strong>Landing page katalog + cara pesan</strong><small>Satu halaman, maksimal 10 produk, scope ditentukan bersama</small></span><b>Sesuai scope</b><span class="catalog-action">Tanyakan</span></a>
-        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Lokal%20Laku%2C%20saya%20ingin%20membahas%20jasa%20otomasi%20dan%20aplikasi."><span class="catalog-code">D03</span><span><strong>Jasa otomasi dan aplikasi</strong><small>Alur kerja, integrasi, atau aplikasi sesuai kebutuhan usaha</small></span><b>Sesuai scope</b><span class="catalog-action">Tanyakan</span></a>
+      <div class="section-head"><h2 id="services-title">Layanan dan harga<br>untuk usaha Anda.</h2><p>Urusan legal dan digital ada di satu daftar. Pilih yang Anda perlukan, lalu tanyakan detailnya lewat WhatsApp.</p></div>
+      <div class="catalog" aria-labelledby="catalog-title"><div class="catalog-head"><h3 id="catalog-title">Daftar layanan dan harga</h3><p class="small">Harga yang tertera adalah biaya jasa. Cakupan, kelayakan, dan detail biaya dikonfirmasi sebelum pembayaran.</p></div><div class="catalog-list">
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20NIB%20Perorangan."><span class="catalog-code">L01</span><span><strong>NIB Perorangan</strong><small>Satu pelaku usaha perorangan</small></span><b>Rp49.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20NIB%20Badan%20Usaha."><span class="catalog-code">L02</span><span><strong>NIB Badan Usaha</strong><small>Pengajuan untuk badan usaha</small></span><b>Rp149.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20PT%20Perorangan%20lengkap."><span class="catalog-code">L03</span><span><strong>PT Perorangan lengkap</strong><small>Pendirian dan paket kelengkapan sesuai scope</small></span><b>Rp549.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20Sertifikat%20Halal%20Self%20Declare."><span class="catalog-code">L04</span><span><strong>Sertifikat Halal Self Declare</strong><small>Jalur dan kelayakan diperiksa per produk</small></span><b>Rp549.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20Sertifikat%20Halal%20Reguler."><span class="catalog-code">L05</span><span><strong>Sertifikat Halal Reguler</strong><small>Rincian proses dan biaya mengikuti produk</small></span><b>Rp4.999.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20SP-PIRT."><span class="catalog-code">L06</span><span><strong>SP-PIRT</strong><small>Untuk produk pangan yang memenuhi ketentuan</small></span><b>Rp249.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20PSAT-PDUK%20untuk%20beras%20atau%20tanaman%20segar%20dari%20alam."><span class="catalog-code">L07</span><span><strong>PSAT-PDUK</strong><small>Untuk beras atau tanaman segar dari alam</small></span><b>Rp249.000</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20landing%20page%20katalog%20dan%20cara%20pesan."><span class="catalog-code">D02</span><span><strong>Landing page katalog + cara pesan</strong><small>Satu halaman, maksimal 10 produk, scope ditentukan bersama</small></span><b>Sesuai scope</b><span class="catalog-action">Tanyakan</span></a>
+        <a class="catalog-item" target="_blank" rel="noopener" href="https://wa.me/6282142858194?text=Halo%20Sahabat%20Legal%20Figa%2C%20saya%20ingin%20membahas%20jasa%20otomasi%20dan%20aplikasi."><span class="catalog-code">D03</span><span><strong>Jasa otomasi dan aplikasi</strong><small>Alur kerja, integrasi, atau aplikasi sesuai kebutuhan usaha</small></span><b>Sesuai scope</b><span class="catalog-action">Tanyakan</span></a>
       </div></div>
       <p class="small" style="margin-top:1.2rem">Kami menjelaskan biaya jasa, biaya resmi, pihak ketiga, pajak, serta hal yang dikecualikan sebelum pembayaran. Kelayakan izin tetap mengikuti ketentuan instansi.</p>
     </div></section>
-    <section id="alur" class="section process" aria-labelledby="process-title"><div class="wrap process-layout"><div><h2 id="process-title">Dari kebutuhan<br>sampai hasil.</h2><p>Tim Lokal Laku menangani alur layanan dari pemeriksaan sampai dukungan, dengan badan usaha pelaksana dan detail pembayaran dicantumkan di penawaran.</p><p class="small">Tidak ada janji izin pasti terbit, peringkat pencarian, atau kenaikan omzet. Jadwal layanan dipisahkan dari proses instansi.</p></div><ol><li><strong>Ceritakan kebutuhan usaha.</strong><span>Mulai dari kegiatan, produk, wilayah, dan kendala. Dokumen identitas tidak diperlukan untuk ringkasan awal.</span></li><li><strong>Kami memeriksa dan memberi penawaran.</strong><span>Output, biaya, PIC, jadwal, revisi, serta refund harus jelas. Anda memutuskan setelah membaca penawaran.</span></li><li><strong>Pembayaran dan pengerjaan mengikuti penawaran.</strong><span>Dokumen dikirim melalui kanal resmi yang tercantum, lalu status diperbarui sampai selesai.</span></li><li><strong>Kami menyerahkan hasil dan dukungan.</strong><span>Akses, aset, kewajiban lanjutan, serta kanal komplain dijelaskan saat serah terima.</span></li></ol></div></section>
-    <section id="permintaan" class="section" aria-labelledby="request-title"><div class="wrap request-layout"><div><h2 id="request-title">Siapkan pertanyaan<br>sebelum menyepakati.</h2><p>Pilih layanan untuk mendapatkan teks permintaan awal, lalu buka WhatsApp Lokal Laku dengan pesan yang sudah disiapkan.</p><p class="small">Tombol membuka WhatsApp; Anda tetap meninjau dan mengirim pesan secara manual.</p><p class="small">Jangan kirim KTP, NIK, password, atau OTP pada pesan awal. Pemilik tetap menguasai akun usaha.</p></div><div class="request-panel">
+    <section id="alur" class="section process" aria-labelledby="process-title"><div class="wrap process-layout"><div><h2 id="process-title">Dari kebutuhan<br>sampai hasil.</h2><p>Tim Sahabat Legal Figa menangani alur layanan dari pemeriksaan sampai dukungan, dengan badan usaha pelaksana dan detail pembayaran dicantumkan di penawaran.</p><p class="small">Tidak ada janji izin pasti terbit, peringkat pencarian, atau kenaikan omzet. Jadwal layanan dipisahkan dari proses instansi.</p></div><ol><li><strong>Ceritakan kebutuhan usaha.</strong><span>Mulai dari kegiatan, produk, wilayah, dan kendala. Dokumen identitas tidak diperlukan untuk ringkasan awal.</span></li><li><strong>Kami memeriksa dan memberi penawaran.</strong><span>Output, biaya, PIC, jadwal, revisi, serta refund harus jelas. Anda memutuskan setelah membaca penawaran.</span></li><li><strong>Pembayaran dan pengerjaan mengikuti penawaran.</strong><span>Dokumen dikirim melalui kanal resmi yang tercantum, lalu status diperbarui sampai selesai.</span></li><li><strong>Kami menyerahkan hasil dan dukungan.</strong><span>Akses, aset, kewajiban lanjutan, serta kanal komplain dijelaskan saat serah terima.</span></li></ol></div></section>
+    <section id="permintaan" class="section" aria-labelledby="request-title"><div class="wrap request-layout"><div><h2 id="request-title">Siapkan pertanyaan<br>sebelum menyepakati.</h2><p>Pilih layanan untuk mendapatkan teks permintaan awal, lalu buka WhatsApp Sahabat Legal Figa dengan pesan yang sudah disiapkan.</p><p class="small">Tombol membuka WhatsApp; Anda tetap meninjau dan mengirim pesan secara manual.</p><p class="small">Jangan kirim KTP, NIK, password, atau OTP pada pesan awal. Pemilik tetap menguasai akun usaha.</p></div><div class="request-panel">
       <label for="service-choice">Layanan yang ingin dibahas</label><select id="service-choice" disabled><option value="L01">NIB Perorangan</option><option value="L02">NIB Badan Usaha</option><option value="L03">PT Perorangan lengkap</option><option value="L04">Sertifikat Halal Self Declare</option><option value="L05">Sertifikat Halal Reguler</option><option value="L06">SP-PIRT</option><option value="L07">PSAT-PDUK</option><option value="D02">Landing page katalog + cara pesan</option><option value="D03">Jasa otomasi dan aplikasi</option></select>
       <label for="request-text">Ringkasan pesan</label><textarea id="request-text" readonly spellcheck="false" aria-describedby="manual-copy"></textarea><a id="copy-request" class="button primary" target="_blank" rel="noopener" href="https://wa.me/6282142858194">Buka WhatsApp</a><p id="copy-status" role="status" aria-live="polite">Pesan siap ditinjau sebelum dikirim.</p><p id="manual-copy" class="small request-footnote">WhatsApp terbuka di tab baru. Tidak ada pesan yang dikirim otomatis dan tidak ada data yang disimpan oleh halaman.</p><noscript><p>Pilih layanan lalu buka WhatsApp dengan pesan umum. Halaman ini tidak mengirim pesan otomatis.</p></noscript>
     </div></div></section>
   </main>
-  <footer><div class="wrap"><p><img class="footer-logo" src="assets/logo-lokal-laku-putih.svg" alt="Lokal Laku">Brand layanan legalitas awal dan katalog digital untuk UMKM Malang dan sekitarnya.</p><p>Detail badan usaha pelaksana tercantum dalam penawaran. Tidak menerima pembayaran atau dokumen melalui halaman ini.</p></div></footer>
+  <footer><div class="wrap"><p><img class="footer-logo" src="assets/logo-sahabat-legal-figa-putih.svg" alt="Sahabat Legal Figa">Sahabat UMKM Malang dan sekitarnya untuk legalitas usaha dan katalog digital.</p><p>Detail badan usaha pelaksana tercantum dalam penawaran. Tidak menerima pembayaran atau dokumen melalui halaman ini.</p></div></footer>
   <script>
     'use strict';
     const choices={
